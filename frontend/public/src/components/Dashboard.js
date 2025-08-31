@@ -1,4 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
+import { Badge } from "./ui/badge";
 
 export default function Dashboard() {
   return (
@@ -11,7 +12,7 @@ export default function Dashboard() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold">42</p>
-            <p className="text-muted-foreground text-sm">Good</p>
+            <Badge variant="success">Good</Badge>
           </CardContent>
         </Card>
 
@@ -21,7 +22,7 @@ export default function Dashboard() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold">1.2 Mt</p>
-            <p className="text-muted-foreground text-sm">This year</p>
+            <Badge variant="warning">This year</Badge>
           </CardContent>
         </Card>
 
@@ -31,7 +32,7 @@ export default function Dashboard() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold">78</p>
-            <p className="text-muted-foreground text-sm">Above average</p>
+            <Badge variant="default">Above average</Badge>
           </CardContent>
         </Card>
       </div>
