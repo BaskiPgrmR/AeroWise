@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
-import Dashboard from "./components/Dashboard";
-import Forecast from "./components/Forecast";
-import Recommender from "./components/Recommender";
-import GreenScorePage from "./pages/GreenScorePage";
-import DataSourcesPage from "./pages/DataSourcesPage";
-import AboutPage from "./pages/AboutPage";
+import Layout from "./components/Layout.jsx";
+import Dashboard from "./components/Dashboard.jsx";
+import Forecast from "./components/Forecast.jsx";
+import Recommender from "./components/Recommender.jsx";
+import GreenScorePage from "./pages/GreenScorePage.jsx";
+import DataSourcesPage from "./pages/DataSourcesPage.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
 
 function App() {
   return (

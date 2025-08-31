@@ -1,36 +1,33 @@
-import { Home, BarChart3, Leaf, Info, LineChart, Compass } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Sidebar() {
+  const location = useLocation();
+
   const navItems = [
-    { name: "Dashboard", path: "/", icon: <Home className="w-4 h-4" /> },
-    { name: "Forecast", path: "/forecast", icon: <LineChart className="w-4 h-4" /> },
-    { name: "Recommender", path: "/recommender", icon: <Compass className="w-4 h-4" /> },
-    { name: "Green Score", path: "/greenscore", icon: <Leaf className="w-4 h-4" /> },
-    { name: "Data Sources", path: "/datasources", icon: <BarChart3 className="w-4 h-4" /> },
-    { name: "About", path: "/about", icon: <Info className="w-4 h-4" /> },
+    { path: "/", label: "Dashboard" },
+    { path: "/forecast", label: "Forecast" },
+    { path: "/recommender", label: "Recommender" },
+    { path: "/greenscore", label: "Green Score" },
+    { path: "/datasources", label: "Data Sources" },
+    { path: "/about", label: "About" },
   ];
 
   return (
-    <aside className="w-64 h-screen bg-gray-100 border-r p-4">
-      <h1 className="text-2xl font-bold mb-6 text-blue-700">AeroWise</h1>
+    <aside className="w-64 bg-gray-100 h-screen shadow-lg p-4">
+      <h1 className="text-2xl font-bold mb-6">AeroWise</h1>
       <nav className="space-y-2">
         {navItems.map((item) => (
-          <NavLink
-            key={item.name}
+          <Link
+            key={item.path}
             to={item.path}
-            end={item.path === "/"} // exact match only for Dashboard
-            className={({ isActive }) =>
-              `flex items-center gap-2 px-3 py-2 rounded-lg transition-colors duration-200 ${
-                isActive
-                  ? "bg-blue-500 text-white font-semibold"
-                  : "text-gray-700 hover:bg-gray-200"
-              }`
-            }
+            className={`block px-4 py-2 rounded-lg font-medium ${
+              location.pathname === item.path
+                ? "bg-blue-500 text-white"
+                : "text-gray-700 hover:bg-gray-200"
+            }`}
           >
-            {item.icon}
-            {item.name}
-          </NavLink>
+            {item.label}
+          </Link>
         ))}
       </nav>
     </aside>
