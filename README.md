@@ -1,31 +1,40 @@
 # AeroWise — AI-Powered Environmental Intelligence for Urban Real Estate
 
-**AeroWise** is a web-based dashboard that brings environmental intelligence into real estate decision-making.
+**AeroWise** is a design project developed to integrate environmental intelligence into real estate decision-making.  
 
-In many cities, property evaluations focus on price, location, and amenities—while overlooking crucial ecological indicators like air quality and green cover. These factors directly affect public health, urban sustainability, and long-term property value.
+In most cities, property evaluations focus on price, location, and amenities. However, ecological indicators such as air quality and green cover are often overlooked, despite their significant impact on public health, sustainability, and long-term property value.  
 
-AeroWise fills this gap by combining real-time and historical environmental data with geospatial analysis and machine learning. The platform empowers citizens, investors, and urban planners to make informed, sustainability-driven choices.
+This project addresses this gap by combining real-time and historical environmental data with geospatial analysis and machine learning. The result is a dashboard that empowers citizens, investors, and urban planners to make informed, sustainability-oriented decisions.
+
+---
+
+## Project Objectives
+
+- Develop a web-based dashboard that visualizes air quality and green cover data.  
+- Implement machine learning models to forecast Air Quality Index (AQI) trends.  
+- Design a "green score" metric to evaluate ecological health at plot or neighborhood levels.  
+- Provide recommendations for environmentally sustainable real estate development.  
 
 ---
 
 ## Key Features
 
 ### Geospatial Visualization
-- Interactive map showing pollution (AQI) and vegetation (NDVI) data.
-- Zoom into specific plots, districts, or regions.
-- Toggle multiple layers to compare environmental indicators.
+- Interactive map displaying pollution (AQI) and vegetation (NDVI) data.  
+- Ability to zoom into specific plots, districts, or regions.  
+- Layer toggles for comparing multiple environmental indicators.  
 
 ### Air Quality Forecasting
-- Predicts future AQI trends using Facebook Prophet and LSTM neural networks.
-- Accounts for historical patterns and seasonal variations.
+- AQI predictions using Facebook Prophet and LSTM neural networks.  
+- Incorporates historical data and seasonal variations.  
 
 ### Green Score Calculator
-- Aggregates AQI, NDVI, and optionally noise or traffic data.
-- Produces a single ecological health score for any location.
+- Combines AQI, NDVI, and optionally noise/traffic data.  
+- Produces a composite ecological health score for a location.  
 
 ### Environment-Aware Recommendations
-- Suggests plots or neighborhoods with better environmental profiles.
-- Helps prioritize green zones and sustainable development.
+- Suggests plots or neighborhoods with better environmental profiles.  
+- Highlights sustainable zones for residential or commercial development.  
 
 ---
 
@@ -42,64 +51,74 @@ AeroWise fills this gap by combining real-time and historical environmental data
 ## Technology Stack
 
 ### Frontend
-- **React.js** - Interactive dashboard interface
-- **Leaflet / Mapbox** - Geospatial map rendering
+- React.js for interactive dashboard interface  
+- Leaflet / Mapbox for geospatial visualization  
 
 ### Backend
-- **Python (Flask)** - API handling and ML model integration
-- **Node.js** (optional) - Lightweight API or parallel processing
+- Python (Flask) for API handling and ML model integration  
+- Node.js (optional) for lightweight APIs or parallel processing  
 
 ### Machine Learning & Data Science
-- **Prophet** - Time-series AQI prediction
-- **TensorFlow/Keras LSTM** - Deep learning-based forecasting
-- **Pandas / NumPy** - Data cleaning and preprocessing
+- Prophet for time-series AQI forecasting  
+- TensorFlow/Keras LSTM for deep learning predictions  
+- Pandas / NumPy for data cleaning and preprocessing  
 
 ### Geospatial Tools
-- **Google Earth Engine (JavaScript API)** - Large-scale geospatial processing
-- **GeoPandas** - Python-based spatial operations
-- **QGIS** - Manual spatial analysis and validation
+- Google Earth Engine (JavaScript API) for satellite imagery processing  
+- GeoPandas for spatial operations in Python  
+- QGIS for manual spatial validation and analysis  
 
 ---
 
-## How It Works
+## System Workflow
 
-1. **Data Collection**
-   - AQI data from OpenAQ API
-   - NDVI and imagery from Google Earth Engine
-   - GIS shapefiles for zoning and boundaries
+1. **Data Collection**  
+   - AQI data via OpenAQ API  
+   - NDVI and imagery from Google Earth Engine  
+   - GIS shapefiles for zoning and boundaries  
 
-2. **Data Preprocessing**
-   - Clean and normalize AQI and NDVI datasets
-   - Align data with urban zones using spatial joins
-   - Interpolate missing values for accuracy
+2. **Data Preprocessing**  
+   - Cleaning and normalization of AQI and NDVI datasets  
+   - Spatial alignment of data with urban boundaries  
+   - Handling missing values through interpolation  
 
-3. **Model Training & Prediction**
-   - Train Prophet and LSTM models on historical AQI
-   - Use rolling window validation to capture seasonal trends
+3. **Model Training & Prediction**  
+   - Training Prophet and LSTM models on AQI history  
+   - Rolling window validation for seasonal effects  
 
-4. **Green Score Calculation**
-   - Normalize AQI and NDVI to a common scale
-   - Aggregate using weighted scoring to produce a composite score
+4. **Green Score Calculation**  
+   - Normalization of AQI and NDVI  
+   - Weighted aggregation into a composite ecological score  
 
-5. **Visualization & Interaction**
-   - Render maps, charts, and tables in the frontend
-   - Search plots, toggle layers, and view AQI forecasts
-   - Recommend areas based on user-defined criteria
+5. **Visualization & Interaction**  
+   - Maps, charts, and tables rendered in the frontend  
+   - Layer toggling, forecast visualization, and recommendation output  
 
 ---
 
-## Why It Matters
+## Impact and Relevance
 
-Cities are growing rapidly, but environmental quality is often left out of planning and investment decisions. AeroWise helps:
+As urbanization accelerates, environmental factors are often neglected in planning and investment decisions. AeroWise demonstrates how AI and geospatial intelligence can support:  
 
-- Make smarter investments based on ecological health
-- Compare neighborhoods by air quality and green cover—not just cost
-- Support urban planning that prioritizes livable, sustainable environments
+- Smarter property investment choices based on ecological indicators.  
+- Comparison of neighborhoods beyond cost and amenities.  
+- Urban planning aligned with health, sustainability, and livability.  
 
-By merging AI, geospatial analytics, and environmental science, AeroWise enables a data-driven approach to building healthier cities.
+By merging artificial intelligence, geospatial analytics, and environmental science, this project showcases a data-driven approach to building healthier and more sustainable cities.  
+
+---
+
+## Team and Contributions
+
+This project was developed as part of a university design project by a three-member team:  
+
+- **Frontend Engineer**: UI/UX design, dashboard implementation, map integration.  
+- **ML & Backend Developer**: AQI forecasting models, API development.  
+- **Data & GIS Specialist**: Data collection, preprocessing, geospatial analysis.  
 
 ---
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).  
+
