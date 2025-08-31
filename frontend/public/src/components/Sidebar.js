@@ -19,9 +19,9 @@ export default function Sidebar() {
           <NavLink
             key={item.name}
             to={item.path}
-            end={item.path === "/"} // ensures exact match for Dashboard
+            end={item.path === "/"} // exact match only for Dashboard
             className={({ isActive }) =>
-              `flex items-center gap-2 px-3 py-2 rounded-lg transition ${
+              `flex items-center gap-2 px-3 py-2 rounded-lg transition-colors duration-200 ${
                 isActive
                   ? "bg-blue-500 text-white font-semibold"
                   : "text-gray-700 hover:bg-gray-200"
